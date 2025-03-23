@@ -13,3 +13,4 @@ sources:
       - name: product_category_name_translations
       - name: products
       - name: sellers
+      - name: dim_order_total_value
