@@ -1,0 +1,10 @@
+
+
+  create or replace view `ambient-scope-454609-d5`.`brazilian_ecommerce`.`dim_seller`
+  OPTIONS()
+  as SELECT DISTINCT
+  seller_id,
+  seller_city,
+  seller_state
+FROM `ambient-scope-454609-d5`.`brazilian_ecommerce`.`sellers_dataset`;
+
