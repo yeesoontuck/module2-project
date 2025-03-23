@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.env
+.venv/
+elt/
+env/
+venv/
+ENV/
+
+# Jupyter artifacts
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# DBT build output
+target/
+dbt_modules/
+
+# Secrets
+*.json
+*.key
+profiles.yml
+application_default_credentials.json
+
+# OS metadata
+.DS_Store
+Thumbs.db
