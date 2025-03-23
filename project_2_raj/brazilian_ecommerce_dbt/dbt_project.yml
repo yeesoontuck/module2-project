@@ -1,0 +1,21 @@
+name: 'brazilian_ecommerce_dbt'
+version: '1.0'
+config-version: 2
+
+profile: 'brazilian_ecommerce_dbt'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]
+
+
+models:
+  brazilian_ecommerce_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: view
+    analysis:
+      +materialized: view
+
+

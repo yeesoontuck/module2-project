@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: ecommerce_brazil
+    database: ambient-scope-454609-d5
+    schema: brazilian_ecommerce
+    tables:
+      - name: orders_dataset
+      - name: customer_dataset
+      - name: order_items_dataset
+      - name: products_dataset
+      - name: sellers_dataset

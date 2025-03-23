@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned staging model for raw orders"
+    columns:
+      - name: order_purchase_timestamp
+        description: "Timestamp when the order was placed"
+        tests:
+          - not_null
+
+      - name: order_estimated_delivery_date
+        description: "Estimated delivery date should follow purchase date"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "order_estimated_delivery_date >= order_purchase_timestamp"
+
+      - name: order_status
+        description: "Order status should be a known value"
+        tests:
+          - accepted_values:
+              values: ['delivered', 'shipped', 'canceled', 'invoiced', 'processing', 'unavailable', 'created', 'approved']

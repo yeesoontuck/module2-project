@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "Fact table for orders."
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer ID"
+        tests:
+          - relationships:
+              to: ref('customers')
+              field: customer_id
+      - name: order_status
+        description: "Order status"
+  - name: dim_customers
+    description: "Dim table for customers."
+    columns:
+      - name: customer_id
+        description: "Customer ID per order"
+        tests:
+          - unique
+          - not_null
+      - name: customer_unique_id
+        description: "Customer Unique ID"
+      - name: customer_zip_code_prefix
+        description: "Customer zip code"
+      - name: customer_city
+        description: "Customer city name"
+      - name: customer_state
+        description: "Customer state code"
