@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: fact_orders
+  - name: dim_orders
     description: "Fact table for orders."
     columns:
       - name: order_id
@@ -17,6 +17,10 @@ models:
               field: customer_id
       - name: order_status
         description: "Order status"
+      - name: total_order_value
+        description: "Total order value"
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null: {}
   - name: dim_customers
     description: "Dim table for customers."
     columns:
@@ -33,3 +37,22 @@ models:
         description: "Customer city name"
       - name: customer_state
         description: "Customer state code"
+  - name: dim_payments
+    description: "Dim table for payments."
+    columns:
+      - name: order_id
+        description: "Order ID"
+        tests:
+          - not_null
+      - name: payment_sequential
+        description: "Payment sequence counter"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 1
+              max_value: 48
+      - name: payment_type
+        description: "Payment type"
+        tests:
+          - dbt_utils.not_accepted_values:
+              values: ['not_defined']
+        
