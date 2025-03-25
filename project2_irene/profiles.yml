@@ -1,0 +1,10 @@
+project2_irene: 
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "peak-tide-430410-c2"
+      dataset: "brazilian_ecommerce"
+      keyfile: "peak-tide-430410-c2-86ab30491506.json"
+      threads: 1

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fact_order.sql
+    description: "Dimension table for order."
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not null
