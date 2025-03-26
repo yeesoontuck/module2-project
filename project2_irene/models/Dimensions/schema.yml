@@ -22,10 +22,8 @@ models:
 
 models:
   - name: dim_products
-    description: "Dimension table for seller.products"
     columns:
       - name: product_id
-        description: "The primary key for this table"
         tests:
           - unique
-          - not null
+          - not_null
