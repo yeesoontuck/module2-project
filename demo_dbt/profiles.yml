@@ -1,0 +1,20 @@
+demo_dbt:
+  outputs:
+    dev:
+      dataset: composer_test
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: concise-faculty-452613-a1
+      threads: 1
+      type: bigquery
+      impersonate_service_account: composer-airflow-dbt@concise-faculty-452613-a1.iam.gserviceaccount.com
+    prod:
+      type: bigquery
+      method: oauth
+      project: concise-faculty-452613-a1
+      dataset: composer_test
+  target: dev
+  

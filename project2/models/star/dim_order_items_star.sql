@@ -5,8 +5,6 @@ WITH category_embed AS (
         `oi`.`order_id`,
         `oi`.`order_item_id`,
         `oi`.`product_id`,
-        `oi`.`price`,
-        `oi`.`freight_value`,
         `t`.`product_category_name_english`
     FROM {{ source('brazil_e_commerce', 'order_items') }} AS oi
     JOIN {{ source('brazil_e_commerce', 'products') }} AS p
