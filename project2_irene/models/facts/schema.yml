@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fact_order_item_details
+    description: "Fact table for order item details."
+    columns:
+      - name: order_item_id
+        description: "The primary key for this table"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
