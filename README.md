@@ -6,6 +6,8 @@
 
 [Jupyter Notebook](notebooks/project.ipynb)
 
+[Data Preparation and Exploration](notebooks/data_preparation_and_exploration)
+
 [Report Slide Deck](assets/slides.pdf)
 
 ---
