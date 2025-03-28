@@ -4,11 +4,9 @@
 
 [Github Repository](https://github.com/yeesoontuck/module2-project)
 
-[Jupyter Notebook](notebooks/project.ipynb)
+[Report Slide Deck](assets/slides.pdf)
 
 [Data Preparation and Exploration](notebooks/data_preparation_and_exploration)
-
-[Report Slide Deck](assets/slides.pdf)
 
 [Automated Data Ingestion from CSV to BigQuery](notebooks/Automated_CSV_Load_to_BigQuery.ipynb)
 
