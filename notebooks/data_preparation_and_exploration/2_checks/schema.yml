@@ -17,4 +17,9 @@ models:
         description: Only 'canceled' status is acceptable here.
         tests:
           - dbt_utils.expression_is_true:
-              expression: "{{ order_status }} = 'canceled'"
+              expression: "{{order_status}} = 'canceled'"
+      - name: payment_without_items
+        description: Canceled orders must have zero payment.
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "{{ payment_without_items }} = 0.0"  # Use 0.0 for FLOAT types
