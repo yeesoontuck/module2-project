@@ -21,6 +21,12 @@ order_item_values AS (
 SELECT
   oi.order_item_id,
   oi.order_id,
+  o.customer_id,
+  o.order_status,
+  o.order_purchase_timestamp,
+  o.order_delivered_carrier_date,
+  o.order_delivered_customer_date,
+  o.order_estimated_delivery_date,
   oi.seller_id,
   oi.product_id,
   oi.price,
@@ -30,6 +36,8 @@ SELECT
   os.total_payment_value,
   os.total_payment_value * (oi.price / oiv.total_order_value) AS prop_payment_value
 FROM {{ source('brazilian_ecommerce', 'order_items') }} oi
+JOIN {{ source('brazilian_ecommerce', 'orders') }} o
+  ON oi.order_id = o.order_id
 JOIN order_sums os
   ON oi.order_id = os.order_id
 JOIN order_item_values oiv
