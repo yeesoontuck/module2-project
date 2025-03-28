@@ -10,7 +10,9 @@
 
 [Report Slide Deck](assets/slides.pdf)
 
-[Automated Data Ingestion from CSV to BigQuery](notebooks/working/Automated_CSV_Load_to_BigQuery.ipynb)
+[Automated Data Ingestion from CSV to BigQuery](notebooks/Automated_CSV_Load_to_BigQuery.ipynb)
+
+[Data Validation](notebooks/SQL_Queries_for_Data_Validation.ipynb)
 
 ---
 
