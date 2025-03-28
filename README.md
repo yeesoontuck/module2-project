@@ -10,6 +10,8 @@
 
 [Report Slide Deck](assets/slides.pdf)
 
+[Automated Data Ingestion from CSV to BigQuery](notebooks/working/Automated_CSV_Load_to_BigQuery.ipynb)
+
 ---
 
 ## Orchestration
