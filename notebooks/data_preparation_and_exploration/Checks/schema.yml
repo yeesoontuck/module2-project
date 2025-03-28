@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: check_order_item_payment
+    description: "Dimension table for order_item_payment."
+    columns:
+      - name: order_in_orders
+        description: "primary key should be unique and not null"
+        tests:
+          - not_null
+
+models:
+  - name: check_order_item_payment
+    description: 'Model description'
+    columns:
+      - name: order_status
+        description: Only 'canceled' status is acceptable here.
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "{{ order_status }} = 'canceled'"

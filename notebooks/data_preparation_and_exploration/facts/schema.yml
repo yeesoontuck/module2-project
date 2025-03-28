@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: fact_order_item_details
+    description: "Fact table for order item details."
+    columns:
+      - name: order_item_id
+        description: "The primary key for this table"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: customer_id
+        description: "Checking if any customer missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null        
+
+      - name: product_id
+        description: "Checking if any product missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: seller_id
+        description: "Checking if any seller missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: price
+        description: "Checking if any price missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: shipping_limit_date
+        description: "Checking if any date missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: freight_value
+        description: "Checking if any freight missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: order_status
+        description: "Checking if any order status missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: order_delivered_carrier_date
+        description: "Checking if any carrier delivery date missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: order_delivered_customer_date
+        description: "Checking if any customer delivery date missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
+      - name: order_estimated_delivery_date
+        description: "Checking if any estimated delivery date missing"
+        tests: # no need to run unique test because item number is order item number.
+          - not_null
+
