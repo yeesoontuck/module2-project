@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: brazilian_ecommerce
+    database: peak-tide-430410-c2
+    schema: brazilian_ecommerce
+    tables:
+      - name: customers
+      - name: geolocation
+      - name: order_items
+      - name: order_payments
+      - name: order_reviews
+      - name: orders
+      - name: product_category_name_translation
+      - name: products
+      - name: sellers
+      - name: dim_customers
+      - name: dim_products
+      - name: dim_sellers
+      - name: fact_order_item_details
+      - name: check_order_item_payment
