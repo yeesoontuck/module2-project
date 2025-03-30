@@ -2,3 +2,7 @@ dbt-core==1.9.2
 dbt-bigquery==1.9.1
 seaborn==0.13.2
 pandas-gbq==0.28.0
+pyarrow==12.0.1
+pandas==1.5.3
+matplotlib==3.7.1
+google-cloud-bigquery==3.10.0
